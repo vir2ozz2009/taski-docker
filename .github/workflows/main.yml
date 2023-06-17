@@ -152,8 +152,7 @@ jobs:
           tags: vir2ozz2009/taski_gateway:latest
   deploy:
     runs-on: ubuntu-latest
-    needs: 
-      # Дождёмся билда всех образов Taski
+    needs:
       - build_and_push_to_docker_hub
       - build_frontend_and_push_to_docker_hub
       - build_gateway_and_push_to_docker_hub
